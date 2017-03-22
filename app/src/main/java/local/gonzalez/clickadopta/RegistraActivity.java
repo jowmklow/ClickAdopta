@@ -88,7 +88,7 @@ date
                     Statement st = conn.createStatement();
                     st.executeUpdate("insert into user_id(id_user, pass, telf, city, cp, tiempo) values ('" + name + "', '" + password + "', '" + phone + "', '" + ciudad + "', '" + cp +"', '"+ dateFormat.format(cal.getTime())+"');");
 
-                    Intent i = new Intent(RegistraActivity.this, EntraActivity.class);
+                    Intent i = new Intent(RegistraActivity.this, MainActivity.class);
 
                     startActivity(i);//pantalla entra si conecta
 

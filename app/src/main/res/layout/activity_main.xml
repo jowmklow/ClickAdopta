@@ -8,46 +8,88 @@
 
     <LinearLayout
         android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingLeft="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="315dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <ImageView
+            android:id="@+id/imagenLogo"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clickadopta_logo"
+            android:maxHeight="200dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="hola" />
+
+        <TextView
+            android:text="Nom d'usuari"
+            android:textSize="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/entra_nom_inici"
+            android:textSize="20dp"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Contrasenya"
+            android:textSize="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/entra_contrasenya_inici"
+            android:textSize="20dp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="357dp"
+        android:layout_height="97dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp">
+
+        <Button
+            android:id="@+id/registra"
+            android:text="REGISTRATE"
+            android:layout_width="134dp"
+            android:layout_height="60dp"
+
+
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/colorAccent"
+            android:fadingEdge="vertical"
+            android:layout_marginBottom="148dp"
             android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/entra"
+            android:layout_marginStart="20dp" />
+
+        <Button
+            android:id="@+id/inicia_sessio"
+            android:text="ENTRAR"
+            android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="42dp"
+            android:layout_alignBaseline="@+id/registra"
+            android:layout_alignBottom="@+id/registra"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="130dp">
+            android:layout_width="134dp" />
 
-            <Button
-                android:id="@+id/entra"
-                android:text="ENTRAR"
-                android:layout_height="60dp"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:background="@color/colorAccent"
-                android:layout_marginStart="42dp"
-                android:layout_alignBaseline="@+id/registra"
-                android:layout_alignBottom="@+id/registra"
-                android:layout_alignParentStart="true"
-                android:layout_width="134dp" />
-
-            <Button
-                android:id="@+id/registra"
-                android:text="REGISTRATE"
-                android:layout_width="134dp"
-                android:layout_height="60dp"
-
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:background="@color/colorAccent"
-                android:fadingEdge="vertical"
-                android:layout_marginBottom="148dp"
-                android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/entra"
-                android:layout_marginStart="20dp" />
-        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

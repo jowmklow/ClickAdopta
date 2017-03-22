@@ -6,93 +6,36 @@
     android:layout_height="match_parent"
     tools:context="local.gonzalez.clickadopta.MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingLeft="10dp"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
-        <TextView
-            android:text="Nom"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/nombre"
-            android:textSize="20dp"
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        />
 
-        <TextView
-            android:text="Contrasenya"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/image1"
+            android:text="imagen ejemplo"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.03"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true" />
 
-        <EditText
-            android:id="@+id/contraseña"
-            android:textSize="20dp"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="Telefono"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <!-- Layout for content is here. This can be a RelativeLayout  -->
 
-        <EditText
-            android:id="@+id/telefono"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="Direcció"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/direccion"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="Ciudad"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/ciudad"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:text="Código Postal"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/codigop"
-            android:textSize="20dp"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/registra"
-        android:text="registra"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+</RelativeLayout>
 </RelativeLayout>
