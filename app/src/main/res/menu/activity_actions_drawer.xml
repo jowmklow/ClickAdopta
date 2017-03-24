@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perros"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Perros" />
+        <item
+            android:id="@+id/nav_gatos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gatos" />
+        <item
+            android:id="@+id/nav_apadrinar"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Apadrina" />
+        <item
+            android:id="@+id/nav_voluntariado"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Voluntariado" />
+        <item
+            android:id="@+id/nav_quienessomos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Quienes somos" />
+        <item
+            android:id="@+id/nav_contacto"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Contacto" />
+        <item
+            android:id="@+id/nav_dondeestamos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Ubicación" />
+    </group>
+
+    <!-- <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item> -->
+</menu>

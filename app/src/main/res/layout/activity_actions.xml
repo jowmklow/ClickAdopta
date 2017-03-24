@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_entra"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="local.gonzalez.clickadopta.MainActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <RelativeLayout
+    <include
+        layout="@layout/app_bar_actions"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:weightSum="1">
+        android:layout_height="match_parent" />
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar"
-            android:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+
+        app:headerLayout="@layout/nav_header_actions"
+        app:menu="@menu/activity_actions_drawer"
         />
 
-        <Button
-            android:id="@+id/image1"
-            android:text="imagen ejemplo"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_weight="0.03"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="33dp"
-            android:layout_below="@+id/toolbar"
-            android:layout_alignParentStart="true" />
-
-
-        <!-- Layout for content is here. This can be a RelativeLayout  -->
-
-</RelativeLayout>
-</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button inicia;
     boolean error = false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 }*/
             }
         });
-
 
     }
 

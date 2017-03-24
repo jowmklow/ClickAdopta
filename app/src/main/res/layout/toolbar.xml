@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+<android.support.v7.widget.Toolbar
+
+    android:id="@+id/toolbar"
     android:minHeight="?attr/actionBarSize"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:titleTextColor="@android:color/holo_orange_light"
+    app:titleTextColor="@android:color/holo_orange_dark"
     android:background="@android:color/background_dark"
     app:popupTheme="@drawable/clickadopta_logo"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    app:title="@string/app_name"></android.support.v7.widget.Toolbar>
+    app:title="@string/app_name">
+
+</android.support.v7.widget.Toolbar>

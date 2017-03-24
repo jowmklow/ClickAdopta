@@ -2,8 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="local.gonzalez.clickadopta"
     android:versionCode="1"
-    android:versionName="1.0" >
-    <uses-sdk android:minSdkVersion="8"/>
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,9 +25,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistraActivity"/>
-        <activity android:name=".ActionsActivity" />
+        <activity android:name=".RegistraActivity" />
+        <activity
+            android:name=".ActionsActivity"
+            android:label="@string/title_activity_actions"
+            android:color="@android:color/holo_orange_dark"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".DondeActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ContactoActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".QuienesActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".VoluntariadoActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ApadrinaActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".GatosActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".PerrosActivity"
+            android:theme="@style/AppTheme" />
+
+
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 </manifest>
