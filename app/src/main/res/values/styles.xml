@@ -9,10 +9,15 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-
+        <item name="android:textColor">@color/color_text</item>
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorTertiary">@color/color_text</item>
+    </style>
 
+    <style name="CustomtextColor" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/color_text</item>
     </style>
 </resources>
+

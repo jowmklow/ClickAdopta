@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Internet conectado", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Internet desconectado", Toast.LENGTH_LONG).show();
-            Intent offline = new Intent(this, ActionsActivity.class);
+            Intent offline = new Intent(this, QuienesActivity.class);
             startActivity(offline);
             finish();
         }

@@ -10,17 +10,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
 
 public class ActionsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    private ImageView Clickadopta;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actions);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -30,7 +34,22 @@ public class ActionsActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        View headerView = navigationView.getHeaderView(0);
+        headerView.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View view) {
+                                              Intent i = new Intent(ActionsActivity.this, ActionsActivity.class);
+                                              startActivity(i);
+                                              finish();
+                                          }
+                                      }
+        );
+
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -86,7 +105,7 @@ public class ActionsActivity extends AppCompatActivity
             Intent i = new Intent(ActionsActivity.this, QuienesActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_contacto) {
-            Intent i = new Intent(ActionsActivity.this, ContactoActivity.class);
+            Intent i = new Intent(ActionsActivity.this, DondeActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_dondeestamos) {
             Intent i = new Intent(ActionsActivity.this, DondeActivity.class);
@@ -94,11 +113,11 @@ public class ActionsActivity extends AppCompatActivity
             // } else if (id == R.id.nav_share) {
 
             // } else if (id == R.id.nav_send) {
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
+
 }

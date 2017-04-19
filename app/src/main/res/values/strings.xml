@@ -1,17 +1,35 @@
 <resources>
     <string name="app_name"> ClickAdopta</string>
-    <string name="seccion_1">1</string>
-    <string name="seccion_2">2</string>
-    <string name="seccion_3">3</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <!-- TODO: Titulos activitys Toolbar -->
     <string name="title_activity_actions">ClickAdopta</string>
+    <string name="title_activity_apadrina">Apadrina</string>
+    <string name="title_activity_contacto">Contacto</string>
+    <string name="title_activity_donde">Ubicación</string>
+    <string name="title_activity_gatos">Gatos</string>
+    <string name="title_activity_perros">Perros</string>
+    <string name="title_activity_voluntariado">Voluntariado</string>
+    <string name="title_activity_quienes">Quienes</string>
+    <string name="texto">Si no puedes adoptar, apadrina
+
+No siempre se tiene la posibilidad de tener un animal en casa.
+
+A veces, por problemas de espacio o por no disponer de tiempo suficiente, es imposible tener un animal de compañía en nuestro hogar.
+
+Ofrecemos la posibilidad de apadrinar uno de nuestros perros o gatos.
+
+Tu nombre figurará en la ficha del animal que aparece en nuestra web y podrás venir a verlo siempre que quieras, dentro de los horarios de visita del refugio (ver CONTACTO).
+
+Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio. Y si apadrinas un gato, estará encantado de que vengas a acariciarlo y a hacerle compañía.</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="apadrina_logo">Perro apadrinado</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
