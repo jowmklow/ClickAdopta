@@ -31,5 +31,9 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto_voluntariado">Necesitamos personas comprometidas</string>
+    <string name="perros_voluntariado">Perros</string>
+    <string name="gatos_voluntariado">Gatos</string>
+    <string name="perros2_voluntariado">Ver PDF</string>
 
 </resources>

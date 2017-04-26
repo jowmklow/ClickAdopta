@@ -11,28 +11,42 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class ApadrinaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    LinearLayout linearLayout;
+    Toolbar toolbar;
+    DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apadrina);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
+        toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.bringToFront();
+                Toast.makeText(v.getContext(), "haha", Toast.LENGTH_LONG).show();
+            }
+        });
         View headerView = navigationView.getHeaderView(0);
         headerView.setOnClickListener(new View.OnClickListener() {
                                           @Override
@@ -43,7 +57,7 @@ public class ApadrinaActivity extends AppCompatActivity
                                           }
                                       }
         );
-
+        linearLayout.bringToFront();
 
     }
 
@@ -62,6 +76,7 @@ public class ApadrinaActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.actions, menu);
+
         return true;
     }
 
@@ -83,10 +98,14 @@ public class ApadrinaActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        DrawerLayout drawer;
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.bringToFront();
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_perros) {
+
             Intent i = new Intent(ApadrinaActivity.this, PerrosActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_gatos) {
@@ -112,7 +131,6 @@ public class ApadrinaActivity extends AppCompatActivity
             // } else if (id == R.id.nav_send) {
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
