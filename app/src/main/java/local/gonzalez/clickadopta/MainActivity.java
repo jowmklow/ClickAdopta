@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MainActivity extends AppCompatActivity {
-
+    private FragmentManager manager;
     private Button registra;
     private EditText entraNom;
     private EditText entraContra;
@@ -32,20 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
         ConnectivityManager cManager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
         NetworkInfo nInfo = cManager.getActiveNetworkInfo();
-        if (nInfo != null && nInfo.isConnected()) {
-            Toast.makeText(this, "Internet conectado", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Internet desconectado", Toast.LENGTH_LONG).show();
-            Intent offline = new Intent(this, QuienesActivity.class);
-            startActivity(offline);
-            finish();
-        }
+
+
         //servidor test
         entraNom = (EditText) findViewById(R.id.entra_nom_inici);
         entraContra = (EditText) findViewById(R.id.entra_contrasenya_inici);
         inicia = (Button) findViewById(R.id.inicia_sessio);
 
-
+        if (nInfo != null && nInfo.isConnected()) {
+            Snackbar.make(entraNom, "Internet conectado", Snackbar.LENGTH_LONG).show();
+        } else {
+            Snackbar.make(entraNom, "Internet desconectado", Snackbar.LENGTH_LONG).show();
+        }
         registra = (Button) findViewById(R.id.registra);
         registra.setOnClickListener(new View.OnClickListener() {
                                         @Override

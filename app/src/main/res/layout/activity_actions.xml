@@ -8,10 +8,21 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_actions"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/app_bar_actions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/contenedor1"
+            android:layout_below="@+id/abrir"></FrameLayout>
+    </RelativeLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -20,8 +31,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_actions"
-        app:menu="@menu/activity_actions_drawer"
-        />
+        app:menu="@menu/activity_actions_drawer" />
 
 
 </android.support.v4.widget.DrawerLayout>

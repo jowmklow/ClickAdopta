@@ -35,5 +35,8 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="perros_voluntariado">Perros</string>
     <string name="gatos_voluntariado">Gatos</string>
     <string name="perros2_voluntariado">Ver PDF</string>
+    <string name="texto1">texto1</string>
+    <string name="texto2">texto2</string>
+    <string name="texto3">texto3</string>
 
 </resources>

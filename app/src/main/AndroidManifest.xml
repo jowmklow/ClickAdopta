@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -27,43 +28,10 @@
         </activity>
 
         <activity android:name=".RegistraActivity" />
+        <activity android:name=".Perros" />
         <activity
             android:name=".ActionsActivity"
             android:label="@string/title_activity_actions"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".PerrosActivity"
-            android:label="@string/title_activity_perros"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".GatosActivity"
-            android:label="@string/title_activity_gatos"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".ApadrinaActivity"
-            android:label="@string/title_activity_apadrina"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".VoluntariadoActivity"
-            android:label="@string/title_activity_voluntariado"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".ContactoActivity"
-            android:label="@string/title_activity_contacto"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".DondeActivity"
-            android:label="@string/title_activity_donde"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".QuienesActivity"
-            android:label="@string/title_activity_quienes"
             android:theme="@style/AppTheme" />
 
         <!--

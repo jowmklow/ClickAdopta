@@ -3,6 +3,9 @@ package local.gonzalez.clickadopta;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,44 +13,53 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
 
 public class ActionsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-
-    private ImageView Clickadopta;
+    private FragmentManager manager;
+    DrawerLayout drawer;
+    ActionBarDrawerToggle toggle;
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actions);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        manager = getSupportFragmentManager();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
+
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+/*
         View headerView = navigationView.getHeaderView(0);
         headerView.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                              Intent i = new Intent(ActionsActivity.this, ActionsActivity.class);
-                                              startActivity(i);
-                                              finish();
+                                              Perros_Fragment fragment = new Perros_Fragment();
+                                              setFragment(fragment);
+                                              drawer.closeDrawer(navigationView);
+
                                           }
                                       }
-        );
+        );*/
+        Actions_Fragment fragment = new Actions_Fragment();
+        setFragment(fragment);
+    }
 
-
+    private void setFragment(Fragment fragment) {
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.contenedor1, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 
@@ -83,37 +95,40 @@ public class ActionsActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_perros) {
-            Intent i = new Intent(ActionsActivity.this, PerrosActivity.class);
+            Intent i = new Intent(ActionsActivity.this, Perros.class);
             startActivity(i);
+            // Perros_Fragment fragment = new Perros_Fragment();
+            //  setFragment(fragment);
         } else if (id == R.id.nav_gatos) {
-            Intent i = new Intent(ActionsActivity.this, GatosActivity.class);
-            startActivity(i);
+            Gatos_Fragment fragment = new Gatos_Fragment();
+            setFragment(fragment);
         } else if (id == R.id.nav_apadrinar) {
-            Intent i = new Intent(ActionsActivity.this, ApadrinaActivity.class);
-            startActivity(i);
+            Apadrina_Fragment fragment = new Apadrina_Fragment();
+            setFragment(fragment);
         } else if (id == R.id.nav_voluntariado) {
-            Intent i = new Intent(ActionsActivity.this, VoluntariadoActivity.class);
-            startActivity(i);
+            Voluntariado_Fragment fragment = new Voluntariado_Fragment();
+            setFragment(fragment);
         } else if (id == R.id.nav_quienessomos) {
-            Intent i = new Intent(ActionsActivity.this, QuienesActivity.class);
-            startActivity(i);
+            Quienes_Fragment fragment = new Quienes_Fragment();
+            setFragment(fragment);
         } else if (id == R.id.nav_contacto) {
-            Intent i = new Intent(ActionsActivity.this, DondeActivity.class);
-            startActivity(i);
+            Contacto_Fragment fragment = new Contacto_Fragment();
+            setFragment(fragment);
         } else if (id == R.id.nav_dondeestamos) {
-            Intent i = new Intent(ActionsActivity.this, DondeActivity.class);
-            startActivity(i);
+            Donde_Fragment fragment = new Donde_Fragment();
+            setFragment(fragment);
             // } else if (id == R.id.nav_share) {
 
             // } else if (id == R.id.nav_send) {
         }
+        drawer.closeDrawer(navigationView);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

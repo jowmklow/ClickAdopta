@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="local.gonzalez.clickadopta.Apadrina_Fragment"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:weightSum="0">
+
+            <ImageView
+                android:id="@+id/imagenLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/apadrina_logo"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/apadrina_un_perro" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/texto"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
