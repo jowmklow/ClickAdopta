@@ -22,4 +22,12 @@
         app:headerLayout="@layout/nav_header_actions"
         app:menu="@menu/activity_actions_drawer" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/apadrina_logo"
+        android:gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/apadrina_un_perro" />
 </android.support.v4.widget.DrawerLayout>

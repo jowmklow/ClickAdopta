@@ -29,6 +29,8 @@
 
         <activity android:name=".RegistraActivity" />
         <activity android:name=".Perros" />
+        <activity android:name=".Activity_Detalle" />
+        <activity android:name=".Activity_Principal" />
         <activity
             android:name=".ActionsActivity"
             android:label="@string/title_activity_actions"

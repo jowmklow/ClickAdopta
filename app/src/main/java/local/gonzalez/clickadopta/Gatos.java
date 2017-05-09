@@ -13,13 +13,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 
-/**
- * Created by joel.gonzalez on 05/05/17.
- */
-
-public class Perros extends Activity {
+public class Gatos extends Activity {
+    // ImageView imgShowOk;
     public ArrayList<Lista_contenido.Lista_entrada> animales;
-
 
     public ArrayList<Lista_contenido.Lista_entrada> getAnimales() {
         sqlThread1.start();
@@ -44,7 +40,7 @@ public class Perros extends Activity {
             // String contraEntrada = entraContra.getText().toString();
             String imagen = "tarja";
 
-            String consulta = "select * from tarja where nom like ('Perro%');";
+            String consulta = "select * from tarja where nom like ('Gato%');";
             Connection conn = null;
 
             try {

@@ -102,11 +102,13 @@ public class ActionsActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_perros) {
-            Intent i = new Intent(ActionsActivity.this, Perros.class);
+            Intent i = new Intent(ActionsActivity.this, Activity_Principal.class);
             startActivity(i);
             // Perros_Fragment fragment = new Perros_Fragment();
             //  setFragment(fragment);
         } else if (id == R.id.nav_gatos) {
+            Intent i = new Intent(ActionsActivity.this, Activity_Principal.class);
+            startActivity(i);
             Gatos_Fragment fragment = new Gatos_Fragment();
             setFragment(fragment);
         } else if (id == R.id.nav_apadrinar) {
