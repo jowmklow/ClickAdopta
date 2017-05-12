@@ -13,6 +13,7 @@ public class Fragment_Detalle extends Fragment {
     /**
      * El argumento que representa el ID del elemento selecionado en la lista y que a este fragmento le llega para cargar el contenido apropiado
      */
+
     public static final String ARG_ID_ENTRADA_SELECIONADA = "item_id";
 
     /**
@@ -25,6 +26,7 @@ public class Fragment_Detalle extends Fragment {
      * Es obligatorio un contructor vacío para instanciar el fragmento
      */
     public Fragment_Detalle() {
+
     }
 
     @Override

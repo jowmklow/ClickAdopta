@@ -38,5 +38,12 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="texto1">texto1</string>
     <string name="texto2">texto2</string>
     <string name="texto3">texto3</string>
+    <string name="voluntariado">Necesitamos personas comprometidas</string>
+    <string name="voluntariado1">Unete al voluntariado</string>
+    <string name="voluntariado3">Si quieres ser voluntariado de la Lliga, por favor, lee nuestro plan de voluntariado y si crees que reunes los requisitos necesarios, haz clic en el formulario y rellenalo con los datos que pide</string>
+    <string name="perrosB">PERROS</string>
+    <string name="gatosB">GATOS</string>
+    <string name="Tperros">Formulario para perros</string>
+    <string name="Tgatos">Formulario para gatos</string>
 
 </resources>

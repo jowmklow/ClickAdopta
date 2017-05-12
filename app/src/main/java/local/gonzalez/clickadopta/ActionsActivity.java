@@ -107,8 +107,8 @@ public class ActionsActivity extends AppCompatActivity
             // Perros_Fragment fragment = new Perros_Fragment();
             //  setFragment(fragment);
         } else if (id == R.id.nav_gatos) {
-            Intent i = new Intent(ActionsActivity.this, Activity_Principal.class);
-            startActivity(i);
+            // Intent i = new Intent(ActionsActivity.this, Activity_Secundario.class);
+            // startActivity(i);
             Gatos_Fragment fragment = new Gatos_Fragment();
             setFragment(fragment);
         } else if (id == R.id.nav_apadrinar) {

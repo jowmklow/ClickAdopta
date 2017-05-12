@@ -6,9 +6,82 @@
     android:layout_marginTop="?attr/actionBarSize">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="top|center">
 
+        <TextView
+            android:id="@+id/unete_voluntariado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/voluntariado1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/comprometidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voluntariado"
+            android:layout_below="@+id/unete_voluntariado"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/texto_voluntariado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comprometidas"
+            android:layout_centerInParent="false"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/voluntariado3"
+            android:textAlignment="center"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/BPerrosVolunt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/comprometidas"
+            android:layout_below="@+id/texto_voluntariado"
+            android:layout_marginTop="60dp"
+            android:text="@string/perrosB" />
+
+        <Button
+            android:id="@+id/BGatosVolunt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gatosB"
+            android:layout_alignBaseline="@+id/BPerrosVolunt"
+            android:layout_alignBottom="@+id/BPerrosVolunt"
+            android:layout_alignEnd="@+id/comprometidas" />
+
+        <TextView
+            android:id="@+id/TperrosVolun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/texto_voluntariado"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_below="@+id/BPerrosVolunt"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="34dp"
+            android:text="@string/Tperros"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/TgatosVolun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tgatos"
+            android:textAlignment="center"
+            android:layout_below="@+id/BGatosVolunt"
+            android:layout_toEndOf="@+id/TperrosVolun"
+            android:layout_marginStart="24dp" />
+
+    </RelativeLayout>
 </FrameLayout>
