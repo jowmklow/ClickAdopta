@@ -37,7 +37,7 @@ public class Voluntariado_Fragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.BPerrosVolunt:
-                Uri uri1 = Uri.parse("http://docs.google.com/forms/d/e/1FAIpQLSdgUtXMu6fO8DZVSEFY6AWkInNS8vm3_AKQvdhtqAAU-Q9UVQ/viewform");
+                Uri uri1 = Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSd6X9f91C-QpOKaLVKhvq9wrJRHd8cGdtSEEDwLjt-G1EGFWQ/viewform");
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, uri1);
                 startActivity(intent1);
                 break;

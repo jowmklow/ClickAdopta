@@ -1,14 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="local.gonzalez.clickadopta.Donde_Fragment"
-    android:layout_marginTop="?attr/actionBarSize">
+    android:layout_marginTop="?attr/actionBarSize"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/ubicacion"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ubicacion2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/llamenos"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center" />
+
+        <TextView
+            android:background="@drawable/rounded_corner"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="@color/colorPrimary"
+            android:onClick="onClick"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mapa_perrera"
+        android:layout_width="wrap_content"
+        android:layout_height="204dp"
+        android:src="@drawable/mapa"
+        android:onClick="mapa"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+</LinearLayout>

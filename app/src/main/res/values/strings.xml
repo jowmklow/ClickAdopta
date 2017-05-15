@@ -45,5 +45,16 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="gatosB">GATOS</string>
     <string name="Tperros">Formulario para perros</string>
     <string name="Tgatos">Formulario para gatos</string>
+    <string name="ubicacion">Liga para la protección de Animales i Plantas de Barcenlona</string>
+
+    <string name="ubicacion2">c/ Guarda Antón, 10 08035 - Barcelona - ESPAÑA</string>
+    <string name="llamenos">Llamenos: Tel. (+34) 934 170 124</string>
+    <string name="email">info@protectorabcn.es</string>
+    <string name="equipo1">El órgano de gobierno de la asociación es la Junta Directiva, compuesta por voluntarios y socios, y elegida por la asamblea de socios. Todas estas personas están implicadas en el funcionamiento diario del refugio, son voluntarios con años de experiencia y, por lo tanto, conocen la problemática de la entidad y del abandono y el maltrato de animales en general.</string>
+    <string name="equipo2">La plantilla de trabajadores está compuesta por ocho personas: una directora, un administrativo, una veterinaria, cuatro cuidadores de perros y una cuidadora de gatos. El personal cuenta con el apoyo a diario de los voluntarios, quienes, además, asumen todas las tareas de mantenimiento y atención al público durante los festivos y fines de semana.</string>
+    <string name="equipo3">No todo el trabajo del voluntariado se desarrolla en el refugio. Muchos aportan destrezas y conocimientos profesionales para organizar eventos, actualizar y mantener la web, gestionar la presencia de la Lliga en las redes sociales, diseñar campañas, captar nuevos socios y padrinos, negociar con proveedores, localizar patrocinadores y todas aquellas actividades que contribuyan a fortalecer una entidad densa y viva como la Lliga.</string>
+    <string name="equipo4">Los animales se entregan desparasitados, vacunados, castrados y con el correspondiente microchip identificativo. En caso de que el animal sea demasiado joven para ser esterilizado y/o vacunado, el adoptante asume el compromiso de realizar ambos tratamientos en las fechas y clínicas que indique la Lliga. Su coste ya está incluido en los gastos de adopción. </string>
+    <string name="tittle_equipo">CONOCENOS</string>
+
 
 </resources>

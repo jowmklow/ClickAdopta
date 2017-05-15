@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/imagenLogo"
-        android:layout_width="match_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/clickadopta_logo"
             android:maxHeight="200dp"
