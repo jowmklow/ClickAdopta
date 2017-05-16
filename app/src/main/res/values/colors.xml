@@ -5,4 +5,6 @@
     <color name="colorAccent">#20b2aa</color>
     <color name="colortoolbarbttn">#fc9411</color>
     <color name="color_text">#fc9411</color>
+    <color name="grey">#CCC</color>
+    <color name="green">#32CD32</color>
 </resources>

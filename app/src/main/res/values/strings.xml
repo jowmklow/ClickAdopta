@@ -55,6 +55,13 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="equipo3">No todo el trabajo del voluntariado se desarrolla en el refugio. Muchos aportan destrezas y conocimientos profesionales para organizar eventos, actualizar y mantener la web, gestionar la presencia de la Lliga en las redes sociales, diseñar campañas, captar nuevos socios y padrinos, negociar con proveedores, localizar patrocinadores y todas aquellas actividades que contribuyan a fortalecer una entidad densa y viva como la Lliga.</string>
     <string name="equipo4">Los animales se entregan desparasitados, vacunados, castrados y con el correspondiente microchip identificativo. En caso de que el animal sea demasiado joven para ser esterilizado y/o vacunado, el adoptante asume el compromiso de realizar ambos tratamientos en las fechas y clínicas que indique la Lliga. Su coste ya está incluido en los gastos de adopción. </string>
     <string name="tittle_equipo">CONOCENOS</string>
+    <string name="contacto1">Contacta con nosotros!</string>
+    <string name="sombreado1">e-mail</string>
+    <string name="asunto">Asunto</string>
+    <string name="sombreado2">Inserta el texto aqui</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="horario">HORARIO:</string>
+    <string name="horario_perrera">Lunes - Viernes \nPerros: 10 a 17:30h \nGatos 10 a 15:30h \n\nSabados, Domingos y Festivos 10 a 13h</string>
 
 
 </resources>

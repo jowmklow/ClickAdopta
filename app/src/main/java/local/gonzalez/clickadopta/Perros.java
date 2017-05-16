@@ -40,9 +40,6 @@ public class Perros extends Activity {
         Connectar a la base de dades d'usuaris per saber si ha posat bé el nom i la contrasenya
         */
 
-            // String nomEntrada = entraNom.getText().toString();
-            // String contraEntrada = entraContra.getText().toString();
-            String imagen = "tarja";
 
             String consulta = "select * from tarja where nom like ('Perro%');";
             Connection conn = null;
