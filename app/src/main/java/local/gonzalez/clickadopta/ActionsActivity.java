@@ -1,6 +1,5 @@
 package local.gonzalez.clickadopta;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -13,10 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ActionsActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, Fragment_Lista.Callbacks {
     private FragmentManager manager;
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
@@ -39,18 +39,18 @@ public class ActionsActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-/*
+
         View headerView = navigationView.getHeaderView(0);
         headerView.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                              Perros_Fragment fragment = new Perros_Fragment();
+                                              Actions_Fragment fragment = new Actions_Fragment();
                                               setFragment(fragment);
                                               drawer.closeDrawer(navigationView);
 
                                           }
                                       }
-        );*/
+        );
         Actions_Fragment fragment = new Actions_Fragment();
         setFragment(fragment);
     }
@@ -98,18 +98,25 @@ public class ActionsActivity extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
+        drawer.closeDrawer(navigationView);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_perros) {
-            Intent i = new Intent(ActionsActivity.this, Activity_Principal.class);
-            startActivity(i);
-            // Perros_Fragment fragment = new Perros_Fragment();
-            //  setFragment(fragment);
+            //Intent i = new Intent(ActionsActivity.this, Activity_Principal.class);
+            //startActivity(i);
+            Fragment_Lista fragment = new Fragment_Lista();
+            fragment.setmCallbacks(this);
+            setFragment(fragment);
         } else if (id == R.id.nav_gatos) {
             // Intent i = new Intent(ActionsActivity.this, Activity_Secundario.class);
             // startActivity(i);
             Gatos_Fragment fragment = new Gatos_Fragment();
+            fragment.setmCallbacks(this);
             setFragment(fragment);
         } else if (id == R.id.nav_apadrinar) {
             Apadrina_Fragment fragment = new Apadrina_Fragment();
@@ -130,10 +137,19 @@ public class ActionsActivity extends AppCompatActivity
 
             // } else if (id == R.id.nav_send) {
         }
-        drawer.closeDrawer(navigationView);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
+
+    }
+
+    @Override
+    public void onEntradaSelecionada(Lista_contenido.Lista_entrada animales) {
+        //if (dosFragmentos) {
+        // Si estamos en pantallas grandes, se mostrará el detalle seleccionado en esta misma actividad remplazando el fragmento del detalle por el nuevo
+        Bundle arguments = new Bundle();
+        Fragment_Detalle fragment = new Fragment_Detalle();
+        fragment.setArguments(arguments);
+        fragment.setARG_ENTRADA_SELECIONADA(animales);
+        setFragment(fragment);
 
     }
 

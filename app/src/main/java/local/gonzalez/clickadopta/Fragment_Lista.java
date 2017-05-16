@@ -1,10 +1,12 @@
 package local.gonzalez.clickadopta;
 
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -12,12 +14,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class Fragment_Lista extends ListFragment {
+public class Fragment_Lista extends Fragment implements AdapterView.OnItemClickListener {
 
     /**
      * El callback del fragmento que notificará de pulsaciones en la lista
      */
-    private Callbacks mCallbacks = CallbacksVacios;
+    private Callbacks mCallbacks;
 
     /**
      * Todas las actividades que contengan este fragmento deben implementar la interfaz del este callback. Permite notificar a las actividades de los elementos seleccionados
@@ -26,17 +28,11 @@ public class Fragment_Lista extends ListFragment {
         /**
          * Método Callback que escucha cuando un elemento de la lista ha sido pulsado, entonces entra aquí. Devuelve el ID del elemento de la lista que fue seleccionado
          */
-        public void onEntradaSelecionada(String id);
+        public void onEntradaSelecionada(Lista_contenido.Lista_entrada perro);
     }
 
-    /**
-     * Una implementacón de la interface cuando la interfaz no hace nada. Se usuará cuando el fragmento no esté ligado a la actividad
-     */
-    private static Callbacks CallbacksVacios = new Callbacks() {
-        @Override
-        public void onEntradaSelecionada(String id) {
-        }
-    };
+    ArrayList<Lista_contenido.Lista_entrada> an;
+    ListView lista;
 
     /**
      * Es obligatorio un contructor vacío para instanciar el fragmento
@@ -44,14 +40,25 @@ public class Fragment_Lista extends ListFragment {
     public Fragment_Lista() {
     }
 
+    public static Fragment_Lista newInstance(Callbacks act) {
+        Fragment_Lista f = new Fragment_Lista();
+        f.setmCallbacks(act);
+        return f;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Perros p = new Perros();
-        ArrayList<Lista_contenido.Lista_entrada> an = p.getAnimales();
+        an = p.getAnimales();
+    }
 
-        setListAdapter(new Lista_Adaptador(getActivity(), R.layout.layout_elemento_listado, an) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_ediago, container, false);
+        lista = (ListView) rootView.findViewById(R.id.lista);
+        lista.setAdapter(new Lista_Adaptador(getActivity(), R.layout.layout_elemento_listado, an) {
             @Override
             public void onEntrada(Object entrada, View view) {
                 if (entrada != null) {
@@ -65,36 +72,21 @@ public class Fragment_Lista extends ListFragment {
                 }
             }
         });
-
+        lista.setOnItemClickListener(this);
+        return rootView;
     }
+
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-
-        // Las actividades que contengan este fragmento deben implementar este callback
-        if (!(activity instanceof Callbacks)) {
-            throw new IllegalStateException("Error: La actividad debe implementar el callback del fragmento");
-        }
-
-        mCallbacks = (Callbacks) activity;
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        mCallbacks.onEntradaSelecionada(an.get(position));
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-
-        // Resetear los callbacks activos a los vacíos.
-        mCallbacks = CallbacksVacios;
+    public Callbacks getmCallbacks() {
+        return mCallbacks;
     }
 
-    @Override
-    public void onListItemClick(ListView listView, View view, int posicion, long id) {
-        super.onListItemClick(listView, view, posicion, id);
-
-        // Notificar a la actividad, por medio de la interfaz del callback, que un elemento ha sido seleccionado
-        mCallbacks.onEntradaSelecionada(Lista_contenido.ENTRADAS_LISTA.get(posicion).id);
+    public void setmCallbacks(Callbacks mCallbacks) {
+        this.mCallbacks = mCallbacks;
     }
-
-
 }

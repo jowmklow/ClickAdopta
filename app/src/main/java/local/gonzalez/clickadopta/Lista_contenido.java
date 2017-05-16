@@ -3,6 +3,7 @@ package local.gonzalez.clickadopta;
 import android.app.Activity;
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class Lista_contenido extends Activity {
     /**
      * Representa una entrada del contenido de la lista
      */
-    public static class Lista_entrada {
+    public static class Lista_entrada implements Serializable {
         public String id;
         public Bitmap idImagen;
         public String textoEncima;
