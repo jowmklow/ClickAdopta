@@ -31,15 +31,15 @@
         <activity android:name=".Perros" />
         <activity android:name=".Activity_Detalle" />
         <activity android:name=".Activity_Principal" />
+        <activity android:name=".Gatos" />
         <activity
             android:name=".ActionsActivity"
             android:label="@string/title_activity_actions"
             android:theme="@style/AppTheme" />
 
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
+        <service
+            android:name=".MailIntentService"
+            android:exported="false" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
