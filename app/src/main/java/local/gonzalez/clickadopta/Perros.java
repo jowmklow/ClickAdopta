@@ -18,10 +18,12 @@ import java.util.ArrayList;
  */
 
 public class Perros extends Activity {
+    private boolean limite;
     public ArrayList<Lista_contenido.Lista_entrada> animales;
 
 
-    public ArrayList<Lista_contenido.Lista_entrada> getAnimales() {
+    public ArrayList<Lista_contenido.Lista_entrada> getAnimales(final boolean limit) {
+        limite = limit;
         sqlThread1.start();
         try {
             sqlThread1.join();
@@ -41,7 +43,7 @@ public class Perros extends Activity {
         */
 
 
-            String consulta = "select * from tarja where nom like ('Perro%');";
+            String consulta = (limite) ? "select * from tarja where nom like ('Perro%') limit 5;" : "select * from tarja where nom like ('Perro%');";
             Connection conn = null;
 
             try {

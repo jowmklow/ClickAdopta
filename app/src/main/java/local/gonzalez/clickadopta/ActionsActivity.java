@@ -152,5 +152,4 @@ public class ActionsActivity extends AppCompatActivity
         setFragment(fragment);
 
     }
-
 }

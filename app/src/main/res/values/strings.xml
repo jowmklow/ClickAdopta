@@ -35,9 +35,9 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="perros_voluntariado">Perros</string>
     <string name="gatos_voluntariado">Gatos</string>
     <string name="perros2_voluntariado">Ver PDF</string>
-    <string name="texto1">texto1</string>
-    <string name="texto2">texto2</string>
-    <string name="texto3">texto3</string>
+    <string name="texto1">prueba1</string>
+    <string name="texto2">prueba2</string>
+    <string name="texto3">prueba3</string>
     <string name="voluntariado">Necesitamos personas comprometidas</string>
     <string name="voluntariado1">Unete al voluntariado</string>
     <string name="voluntariado3">Si quieres ser voluntariado de la Lliga, por favor, lee nuestro plan de voluntariado y si crees que reunes los requisitos necesarios, haz clic en el formulario y rellenalo con los datos que pide</string>
@@ -61,8 +61,9 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="sombreado2">Inserta el texto aqui</string>
     <string name="enviar">ENVIAR</string>
     <string name="horario">HORARIO:</string>
-    <string name="horario_perrera">Lunes - Viernes \nPerros: 10 a 17:30h \nGatos 10 a 15:30h \n\nSabados, Domingos y Festivos 10 a 13h</string>
+    <string name="horario_perrera">Lunes - Viernes \nPerros: 10 a 17:30h \nGatos 10 a 15:30h \nSabados Domingos y Festivos \n10 a 13h</string>
     <string name="msgRegisterBarSubject">Mensaje ClickAdopta</string>
+    <string name="noticias">NOTICIAS NUEVOS ANIMALES</string>
 
 
 </resources>

@@ -51,7 +51,7 @@ public class Fragment_Lista extends Fragment implements AdapterView.OnItemClickL
         super.onCreate(savedInstanceState);
 
         Perros p = new Perros();
-        an = p.getAnimales();
+        an = p.getAnimales(false);
     }
 
     @Override

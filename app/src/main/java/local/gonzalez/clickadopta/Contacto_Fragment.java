@@ -4,6 +4,7 @@ package local.gonzalez.clickadopta;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-
 public class Contacto_Fragment extends Fragment {
     private Button sendMail;
     private EditText entrada;
     private EditText email;
+
 
 
     public Contacto_Fragment() {
@@ -39,23 +40,27 @@ public class Contacto_Fragment extends Fragment {
         email = (EditText) getActivity().findViewById(R.id.email);
         entrada = (EditText) getActivity().findViewById(R.id.enviarmail);
 
-        while (entrada.getText().toString().length() < 30) {
-            Snackbar.make(getView(), "Mensaje demasiado corto", Snackbar.LENGTH_SHORT);
-        }
-        while (!email.getText().toString().contains("@gmail.") || !email.getText().toString().contains("@yahoo.")
-                || !email.getText().toString().contains("@hotmail.")) {
-            Snackbar.make(getView(), "Introduzca un correo valido", Snackbar.LENGTH_SHORT);
-        }
+
         sendMail.setOnClickListener(new View.OnClickListener() {
-
-
                                         @Override
                                         public void onClick(View view) {
-                                            System.out.println("añlesjkfhlñasejkfhnasekljfhnalskfjnaselkfjn");
-                                            MailIntentService.startActionSendMail(getContext(), email.getText().toString(), entrada.getText().toString());
-                                            Snackbar.make(getView(), "Mensaje enviado", Snackbar.LENGTH_SHORT);
-                                            email.setText("");
-                                            entrada.setText("");
+                                            boolean b = entrada.getText().toString().length() < 10;
+                                            boolean a = !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches();
+                                            if (a) {
+                                                entrada.setError("Mensaje demasiado corto");
+                                                //Snackbar.make(getView(), "Mensaje demasiado corto", Snackbar.LENGTH_SHORT).show();
+                                            }
+                                            if (b) {
+                                                email.setError("Introduzca un correo valido");
+                                            }
+                                            if (!a && !b) {
+                                                //Snackbar.make(getView(), "Introduzca un correo valido", Snackbar.LENGTH_SHORT).show();
+                                                MailIntentService.startActionSendMail(getContext(), email.getText().toString(), entrada.getText().toString());
+                                                Snackbar.make(getView(), "Mensaje enviado", Snackbar.LENGTH_SHORT).show();
+                                                email.setText("");
+                                                entrada.setText("");
+                                            }
+
                                         }
                                     } //boton de registrar
         );

@@ -34,7 +34,7 @@ public class Gatos_Fragment extends Fragment implements AdapterView.OnItemClickL
         super.onCreate(savedInstanceState);
 
         Gatos g = new Gatos();
-        an = g.getAnimales();
+        an = g.getAnimales(false);
     }
 
 

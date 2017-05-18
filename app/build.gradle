@@ -33,6 +33,7 @@ dependencies {
     //MAIL
     compile 'com.sun.mail:android-mail:1.5.5'
     compile 'com.sun.mail:android-activation:1.5.5'
+    compile 'com.github.moondroid.coverflow:library:1.0'
 
     testCompile 'junit:junit:4.12'
 }
