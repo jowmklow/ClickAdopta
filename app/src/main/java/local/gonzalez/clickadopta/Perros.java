@@ -43,7 +43,7 @@ public class Perros extends Activity {
         */
 
 
-            String consulta = (limite) ? "select * from tarja where nom like ('Perro%') limit 5;" : "select * from tarja where nom like ('Perro%');";
+            String consulta = (limite) ? "select * from tarja where animal = TRUE limit 5;" : "select * from tarja where animal = TRUE;";
             Connection conn = null;
 
             try {

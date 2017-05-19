@@ -39,7 +39,7 @@ public class Gatos extends Activity {
         */
 
 
-            String consulta = (limite) ? "select * from tarja where nom like ('Gato%') limit 5;" : "select * from tarja where nom like ('Gato%');";
+            String consulta = (limite) ? "select * from tarja where animal = FALSE limit 5;" : "select * from tarja where animal = FALSE;";
             Connection conn = null;
 
             try {

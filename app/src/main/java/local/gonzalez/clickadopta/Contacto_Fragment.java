@@ -44,14 +44,15 @@ public class Contacto_Fragment extends Fragment {
         sendMail.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {
-                                            boolean b = entrada.getText().toString().length() < 10;
                                             boolean a = !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches();
+                                            boolean b = entrada.getText().toString() == null || entrada.getText().toString().length() <= 10;
+
                                             if (a) {
-                                                entrada.setError("Mensaje demasiado corto");
-                                                //Snackbar.make(getView(), "Mensaje demasiado corto", Snackbar.LENGTH_SHORT).show();
+                                                email.setError("Introduzca un correo valido");
                                             }
                                             if (b) {
-                                                email.setError("Introduzca un correo valido");
+                                                entrada.setError("Mensaje demasiado corto");
+                                                //Snackbar.make(getView(), "Mensaje demasiado corto", Snackbar.LENGTH_SHORT).show();
                                             }
                                             if (!a && !b) {
                                                 //Snackbar.make(getView(), "Introduzca un correo valido", Snackbar.LENGTH_SHORT).show();
