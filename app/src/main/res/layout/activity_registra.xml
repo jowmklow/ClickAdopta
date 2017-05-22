@@ -81,6 +81,8 @@
         android:text="registra"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:background="@color/colortoolbarbttn"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
 </RelativeLayout>

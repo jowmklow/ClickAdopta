@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Class.forName("org.postgresql.Driver");
                 conn = DriverManager.getConnection("jdbc:postgresql://192.168.0.21:5432/clickadopta", "bernerslee", "tim");
+                //conn = DriverManager.getConnection("jdbc:postgresql://192.168.0.21:5432/clickadopta", "bernerslee", "tim");
                 Statement st = conn.createStatement();
                 ResultSet rs = st.executeQuery(consulta);
                 while (rs.next()) {

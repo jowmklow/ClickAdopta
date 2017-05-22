@@ -64,6 +64,10 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="horario_perrera">Lunes - Viernes \nPerros: 10 a 17:30h \nGatos 10 a 15:30h \nSabados Domingos y Festivos \n10 a 13h</string>
     <string name="msgRegisterBarSubject">Mensaje ClickAdopta</string>
     <string name="noticias">NOTICIAS NUEVOS ANIMALES</string>
+    <string name="sinconexion">Sin conexion</string>
+    <string name="apadrina">FORMULARIO APADRINAMIENTO</string>
+    <string name="registrar">REGISTRATE</string>
+    <string name="entrar">ENTRAR</string>
 
 
 </resources>

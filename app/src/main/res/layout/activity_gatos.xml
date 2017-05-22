@@ -29,5 +29,5 @@
         android:contentDescription="@string/apadrina_logo"
         android:gravity="center"
         android:scaleType="center"
-        android:src="@drawable/apadrina_un_perro" />
+        android:src="@drawable/clickadopta_logo" />
 </android.support.v4.widget.DrawerLayout>

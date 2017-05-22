@@ -39,7 +39,7 @@ public class Gatos extends Activity {
         */
 
 
-            String consulta = (limite) ? "select * from tarja where animal = FALSE limit 5;" : "select * from tarja where animal = FALSE;";
+            String consulta = (limite) ? "select * from tarja where animal = FALSE order by timestamp asc limit 5;" : "select * from tarja where animal = FALSE;";
             Connection conn = null;
 
             try {

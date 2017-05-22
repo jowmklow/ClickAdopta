@@ -4,31 +4,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_perros"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_developer_board_black_48dp"
             android:title="Perros" />
         <item
             android:id="@+id/nav_gatos"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_developer_board_black_48dp"
             android:title="Gatos" />
         <item
             android:id="@+id/nav_apadrinar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_contact_mail_black_48dp"
             android:title="Apadrina" />
         <item
             android:id="@+id/nav_voluntariado"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_contacts_black_48dp"
             android:title="Voluntariado" />
         <item
             android:id="@+id/nav_quienessomos"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_live_help_black_48dp"
             android:title="Quienes somos" />
         <item
             android:id="@+id/nav_contacto"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_textsms_black_48dp"
             android:title="Contacto" />
         <item
             android:id="@+id/nav_dondeestamos"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_directions_black_48dp"
             android:title="Ubicación" />
     </group>
 
