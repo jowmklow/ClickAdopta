@@ -13,6 +13,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/*al principio pense que estaria bien almacenar los pdf de la documentacion dentro de las carpetas
+para que el usuario pudiera verlo cuando quisiera
+pero eso de cara a la seguridad de datos seria poco eficiente y el uso de la app seria menos
+usada, TODO: esta clase no es usada actualmente, se mirara de cara un futuro usarla*/
 public class FileDownloader {
     private static final int MEGABYTE = 1024 * 1024;
 

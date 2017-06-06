@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+//clase registra
 public class RegistraActivity extends AppCompatActivity {
 
         private EditText id_user;
@@ -51,17 +52,8 @@ public class RegistraActivity extends AppCompatActivity {
                 }
             });
         }
-/*
-TABLE user_id
-id_user
-pass
-id_number
-telf
-city
-cp
-date
- */
-        Thread sqlThread = new Thread() {
+
+    Thread sqlThread = new Thread() {
             public void run() {
 
                 String name = id_user.getText().toString();

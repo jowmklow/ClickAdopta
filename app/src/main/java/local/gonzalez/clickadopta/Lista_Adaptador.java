@@ -35,7 +35,7 @@ public abstract class Lista_Adaptador extends BaseAdapter {
             LayoutInflater vi = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = vi.inflate(R_layout_IdView, null);
         }
-        onEntrada(entradas.get(posicion), view);
+        onEntrada(entradas.get(posicion), view); //por cada id que recoja de posicion, muestralo
         return view;
     }
 

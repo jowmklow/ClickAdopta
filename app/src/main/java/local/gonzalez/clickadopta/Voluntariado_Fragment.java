@@ -31,11 +31,12 @@ public class Voluntariado_Fragment extends Fragment implements View.OnClickListe
         BotonGato = (Button) view.findViewById(R.id.BGatosVolunt);
         BotonGato.setOnClickListener(this);
         return view;
-    }
+    }//instanciamos las variables necesarias, 2 botones y 1 view
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            //si se selecciona uno de los 2 ids, uri a url, se abre con action view
             case R.id.BPerrosVolunt:
                 Uri uri1 = Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSd6X9f91C-QpOKaLVKhvq9wrJRHd8cGdtSEEDwLjt-G1EGFWQ/viewform");
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, uri1);

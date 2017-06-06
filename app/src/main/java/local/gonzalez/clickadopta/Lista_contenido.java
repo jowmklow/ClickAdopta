@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Lista_contenido extends Activity {
-
     /**
      * Donde se guardan las entradas de la lista.
      */
@@ -24,15 +23,13 @@ public class Lista_contenido extends Activity {
     public static Map<String, Lista_entrada> ENTRADAS_LISTA_HASHMAP = new HashMap<String, Lista_entrada>();
 
     /**
-     * Creamos estáticamente las entradas
-     */
-    // public Bitmap[] myBitmap = Perros.;
+     Creamos estáticamente las entradas
 
+     public Bitmap[] myBitmap = Perros.
 
-    /**
-     * Añade una entrada a la lista
-     *
-     * @param entrada Elemento que añadimos a la lista
+     Añade una entrada a la lista
+
+     entrada Elemento que añadimos a la lista
      */
     private static void aniadirEntrada(Lista_entrada entrada) {
         ENTRADAS_LISTA.add(entrada);

@@ -14,7 +14,7 @@ public class Quienes_Fragment extends Fragment {
     public Quienes_Fragment() {
     }
 
-
+    //rellena el contenido de fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

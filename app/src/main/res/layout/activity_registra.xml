@@ -15,7 +15,7 @@
         android:id="@+id/linearLayout">
 
         <TextView
-            android:text="Nom"
+            android:text="Nombre"
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:text="Contrasenya"
+            android:text="Contraseña"
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -78,7 +78,7 @@
 
     <Button
         android:id="@+id/registra"
-        android:text="registra"
+        android:text="REGISTRATE"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:background="@color/colortoolbarbttn"

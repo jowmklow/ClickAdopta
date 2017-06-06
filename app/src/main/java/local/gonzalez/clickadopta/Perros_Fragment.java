@@ -12,6 +12,7 @@ public class Perros_Fragment extends Fragment {
     public Perros_Fragment() {
     }
 
+    //rellena el contenido de fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment

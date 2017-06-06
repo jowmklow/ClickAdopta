@@ -45,6 +45,7 @@
             </LinearLayout>
 
             <Button
+                android:onClick="@+id/apadrina"
                 android:id="@+id/apadrina"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"

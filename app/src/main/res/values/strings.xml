@@ -68,6 +68,7 @@ Si apadrinas a un perro, puedes venir a pasearlo por los alrededores del refugio
     <string name="apadrina">FORMULARIO APADRINAMIENTO</string>
     <string name="registrar">REGISTRATE</string>
     <string name="entrar">ENTRAR</string>
+    <string name="SALIR">SALIR</string>
 
 
 </resources>

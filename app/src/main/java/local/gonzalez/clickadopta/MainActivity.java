@@ -5,7 +5,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,8 +17,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+//clase de registro
 public class MainActivity extends AppCompatActivity {
-    private FragmentManager manager;
     private Button registra;
     private EditText entraNom;
     private EditText entraContra;
@@ -97,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Class.forName("org.postgresql.Driver");
                 conn = DriverManager.getConnection("jdbc:postgresql://192.168.0.21:5432/clickadopta", "bernerslee", "tim");
-                //conn = DriverManager.getConnection("jdbc:postgresql://192.168.0.21:5432/clickadopta", "bernerslee", "tim");
                 Statement st = conn.createStatement();
                 ResultSet rs = st.executeQuery(consulta);
                 while (rs.next()) {

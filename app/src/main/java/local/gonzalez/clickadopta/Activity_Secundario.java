@@ -18,7 +18,7 @@ public class Activity_Secundario extends FragmentActivity {
 
         //Se comprueba que exista el framelayout framelayout_contenedor_entrada. Si existe estaremos usando activity_dospaneles.xml, sino estaremos usando activity_listado.xml
         if (findViewById(R.id.framelayout_contenedor_detalle) != null) {
-            // Entra aquí solo en diseños para pantallas grandes (es decir, si usamos res/values-large o res/values-sw600dp). Estaremos usando activity_dospaneles.xml
+            // Entra aquí solo en diseños para pantallas grandes (es decir, si usamos res/values-large o res/values-sw600dp).
         }
     }
 

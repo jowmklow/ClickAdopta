@@ -26,8 +26,9 @@
 
         <TextView
             android:layout_marginTop="20dp"
-            android:text="Nom d'usuari"
+            android:text="Nombre de usuario"
             android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -41,8 +42,9 @@
 
         <TextView
             android:layout_marginTop="20dp"
-            android:text="Contrasenya"
+            android:text="Contraseña"
             android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -72,11 +74,13 @@
             android:text="@string/registrar"
             android:layout_width="134dp"
             android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
 
 
             style="@style/Widget.AppCompat.Button.Colored"
             android:background="@color/colorAccent"
             android:fadingEdge="vertical"
+            android:textColor="@color/colorPrimary"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="35dp" />
 
@@ -85,8 +89,10 @@
             android:text="@string/entrar"
             android:layout_width="134dp"
             android:layout_height="60dp"
+            android:layout_marginRight="10dp"
             style="@style/Widget.AppCompat.Button.Colored"
             android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             android:layout_marginStart="50dp"
             android:layout_alignBaseline="@+id/registra" />
 
